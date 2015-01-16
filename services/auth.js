@@ -12,7 +12,7 @@
 			REDIRECT_URI = 'http://localhost:8000/callback.html';
 		} else {
 			CLIENT_ID = '0fb8fa4e316b44dc8b9211235d1fefda';
-			REDIRECT_URI = 'http://lab.possan.se/thirtify/callback.html';
+			REDIRECT_URI = 'http://BenjaminHolland.github.io/callback.html';
 		}
        
 
