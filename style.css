@@ -8,7 +8,7 @@ body {
             animation: slide 30s linear infinite;
 
     color: #ddd;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 12pt;
 	font-weight: 300;
 	overflow: hidden;
@@ -643,3 +643,4 @@ responsive-cover.responsive-cover-playlist {
 ::-webkit-scrollbar-corner {
   background-color: #1c1c1f;
 }
+
