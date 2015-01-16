@@ -11,7 +11,7 @@
 			CLIENT_ID =	'0fb8fa4e316b44dc8b9211235d1fefda';
 			REDIRECT_URI = 'http://localhost:8000/callback.html';
 		} else {
-			CLIENT_ID = '0fb8fa4e316b44dc8b9211235d1fefda';
+			CLIENT_ID = '9714921402b84783b2a207f1b6e82612';
 			REDIRECT_URI = 'http://BenjaminHolland.github.io/callback.html';
 		}
        
