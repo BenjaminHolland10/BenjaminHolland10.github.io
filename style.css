@@ -52,7 +52,16 @@ h1 {
 	font-size: 30pt;
 	padding: 0;
     color: #fff;
-	margin: 0 0 10px 0;
+	margin:0 auto;
+    text-align: center;
+     left: 0;
+    line-height: 200px;
+    margin-top: -100px;
+    position: absolute;
+    
+    top: 50%;
+    width: 100%;
+
 }
 
 h2 {
@@ -61,7 +70,12 @@ h2 {
 	font-size: 15pt;
 	padding: 0;
     color: #fff;
-	margin: 0 0 10px 0;
+    text-align: center;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+
 }
 
 h3 {
@@ -362,26 +376,22 @@ div.centered div.inner {
 }
 
 a.button {
-	display: inline-block;
-	text-align: center;
-	padding: 5px 20px;
-	border-radius: 50px;
-}
-
-a.button.green {
-	background-color: #070;
-	color: #fff;
-	border: 1px solid #070;
+    
+    text-align: center;
 }
 
 a.button.big.green {
-	display: inline-block;
-	text-align: center;
-	background-color: #070;
-	color: #fff;
-	padding: 10px 40px;
-	border-radius: 50px;
+   display: block;
+    margin-left: auto;
+    margin-right: auto;
+  left: 0;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    margin-top: 50px;
 }
+
 
 a.button.button-add {
 	background-color: rgba(0, 0, 0, 0.2);
@@ -644,4 +654,6 @@ responsive-cover.responsive-cover-playlist {
 ::-webkit-scrollbar-corner {
   background-color: #1c1c1f;
 }
-
+.button {
+    text-align: center;
+}
