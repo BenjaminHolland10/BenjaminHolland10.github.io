@@ -30,8 +30,7 @@
         
 	</head>
 	<body ng-controller="AppController">
-        
-		<div class="fullview playerview" ng-show="showplayer">
+		<div class="fullview playerview" ng-show="showplayer"
 			<div ng-controller="PlayerController">
 				<div class="topgroup">
 					<div class="searchbox">
@@ -121,7 +120,8 @@
 			</div>
 		</div>
 
-		<div class="fullview loginview" ng-show="showlogin">   
+		<div class="loginview" ng-show="showlogin">   
+            
 			<div ng-controller="LoginController">
                 
                 <div class="circle"> <p>&nbsp;</p><p>Welcome to <span style="color:#9C27B0">Buzz 
@@ -130,8 +130,8 @@
 
                        <a ng-click="login()" class="button big green"> <img src = "images/log_in-desktop-large.png"> </a> </div>
                                 </div>
-        </div>
-    </div>
+                        </div>
+                    </div>
 						
                
 					</div>

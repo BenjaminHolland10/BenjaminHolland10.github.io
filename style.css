@@ -1,13 +1,11 @@
 body {
-	
-	background-image: url(images/albumcover.png);
 	background-position: 0px 0px;
  
 	-webkit-animation: slide 50s linear infinite;
        -moz-animation: slide 50s linear;
             animation: slide 50s linear infinite;
 
-    color: #ddd;
+    background-color:#9C27B0;
 	font-family: 'Roboto', sans-serif;
     font-weight: 300;
 	font-size: 12pt;
@@ -43,6 +41,7 @@ div.scrollable {
 }
 
 div.fullview {
+    background-color: #ddd; 
 	width: 100%;
 	height: 100%;
 }
@@ -667,9 +666,9 @@ responsive-cover.responsive-cover-playlist {
   height: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  border: 1px solid #ddd;
+  border: 1px solid #9C27B0;
   border-radius: 10px;
-  background-color: #ddd;
+  background-color: #9C27B0;
 }
 ::-webkit-scrollbar-corner {
   background-color: rgba(0,193,193,.9);
