@@ -266,7 +266,7 @@ hr {
 	right: 50%;
 	top: 0px;
 	text-align: right;
-	width: 100%;
+	
 	padding: 20px;
 }
 
@@ -292,7 +292,7 @@ hr {
 }
 
 .menuview .preview {
-	
+	position: absolute;
 	left: 0px;
 	bottom: 0px;
 	height: 64px;
