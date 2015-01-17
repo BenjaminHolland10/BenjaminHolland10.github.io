@@ -315,8 +315,8 @@ hr {
 }
 
 .menuview .preview responsive-cover {
-	width: 220px;
-	height: 220px;
+	width: 64px;
+	height: 64px;
 	border: 0;
 	outline: 0;
 	border: 1px solid #ddd;
