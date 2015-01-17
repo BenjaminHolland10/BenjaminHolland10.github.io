@@ -266,7 +266,6 @@ hr {
 	right: 50%;
 	top: 0px;
 	text-align: right;
-	
 	padding: 20px;
 }
 
@@ -291,7 +290,7 @@ hr {
 	overflow: auto;
 }
 
-.menuview .preview {
+.bottomgroup .preview {
 	position: absolute;
 	left: 0px;
 	bottom: 0px;
@@ -300,22 +299,22 @@ hr {
 	background-color: #548904;
 }
 
-.menuview .preview > p {
+.bottomgroup .preview > p {
 	display: block;
 	padding: 5px;
 }
 
-.menuview .preview > p b {
+.bottomgroup .preview > p b {
 	display: block;
 	font-weight: 300;
 }
 
-.menuview .preview > p a {
+.bottomgroup .preview > p a {
 	display: block;
 	font-size: 7pt;
 }
 
-.menuview .preview responsive-cover {
+.bottomgroup .preview responsive-cover {
 	width: 64px;
 	height: 64px;
 	border: 0;
