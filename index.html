@@ -96,15 +96,15 @@
 						</div>
 					</div>
 					<div class="midcontrols">
-                        
+                        <div class="playbutton">
+							<a ng-click="resume()" ng-hide="playing"><img src="images/btn-play.png" /></a>
+							<a ng-click="pause()" ng-show="playing"><img src="images/btn-pause.png" /></a>
+						</div>
 						<div class="prevbutton">
 							<a ng-click="prev()"><img src="images/btn-prev.png" /></a>
 						</div>
                         
-						<div class="playbutton">
-							<a ng-click="resume()" ng-hide="playing"><img src="images/btn-play.png" /></a>
-							<a ng-click="pause()" ng-show="playing"><img src="images/btn-pause.png" /></a>
-						</div>
+						
 
 						<div class="nextbutton">
 							<a ng-click="next()"><img src="images/btn-next.png" /></a>
