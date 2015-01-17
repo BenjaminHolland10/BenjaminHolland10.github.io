@@ -2,7 +2,7 @@
 <html>
     <head>
         <script src="//connect.soundcloud.com/sdk.js"></script>
-        <script src="script.js"></script>
+        <script src="BenjaminHolland.gihub.io/script.js"></script>
     </head>
     <body>
         <a href="#" id="start">Start</a>
