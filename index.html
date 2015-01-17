@@ -51,9 +51,7 @@
 							<ul class="menuitems">
 								<li><a href="#/" ng-class="getClass('/')">Browse</a></li>
 							</ul>
-                            <ul class="menuitems">
-								<li><a href="#/" ng-class="getClass('/')">Top Lists</a></li>
-							</ul>
+                           
 							<b><a href="#/me">YOUR MUSIC</a></b>
 							<ul class="menuitems">
 								<li><a href="#/users/{{username}}/tracks" ng-class="getClass('/users/{{username}}/tracks')">Songs</a></li>
@@ -76,7 +74,6 @@
 					</div>
 				</div>
 				<div class="bottomgroup">
-                    <div class="midgroup">
                     <div class="preview">
 							<a href="#/albums/{{trackdata.album.id}}">
 								<responsive-cover ng-model="trackdata.album.images"></responsive-cover>
@@ -88,8 +85,15 @@
 								</a>
 							</p>
 						</div>
-                        </div>
-					<div class="leftcontrols">
+                        
+                    <div class="seekcontrols">
+						<div class="progress">{{ progress | displaytime }}</div>
+						<div class="duration">{{ duration | displaytime }}</div>
+						<div class="slider">
+							<input type="range" ng-model="progress" ng-change="changeprogress()" min="0" max="{{duration}}" />
+						</div>
+					</div>
+					<div class="midcontrols">
                         
 						<div class="prevbutton">
 							<a ng-click="prev()"><img src="images/btn-prev.png" /></a>
@@ -108,18 +112,8 @@
 							<input type="range" ng-change="changevolume()" min="0" max="100" ng-model="volume" />
 						</div>
 					</div>
-					<div class="seekcontrols">
-						<div class="progress">{{ progress | displaytime }}</div>
-						<div class="duration">{{ duration | displaytime }}</div>
-						<div class="slider">
-							<input type="range" ng-model="progress" ng-change="changeprogress()" min="0" max="{{duration}}" />
-						</div>
-					</div>
+					
 					<div class="rightcontrols">
-						<!--
-						a ng-click="shuffle()">SHUF</a>
-						a ng-click="repeat()">REP.</a>
-						-->
 					</div>
 				</div>
 			</div>

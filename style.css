@@ -180,11 +180,11 @@ hr {
 	width: 100%;
 	height: 64px;
 	bottom: 0px;
-	background-color: rgba(83,109,254,.9);
+	background-color: #fff;
 	overflow: hidden;
 }
 
-.bottomgroup .leftcontrols {
+.bottomgroup .midcontrols {
 	position: absolute;
 	left: 10px;
 	top: 2px;
@@ -192,35 +192,36 @@ hr {
 	padding: 0px;
 }
 
-.bottomgroup .leftcontrols .prevbutton {
+.bottomgroup .midcontrols .prevbutton {
 	position: absolute;
 	left: 5px;
+    
 }
 
-.bottomgroup .leftcontrols .playbutton {
+.bottomgroup .midcontrols .playbutton {
 	position: absolute;
 	left: 50%;
 }
 
-.bottomgroup .leftcontrols .nextbutton {
+.bottomgroup .midcontrols .nextbutton {
 	position: absolute;
 	left: 75px;
 }
 
-.bottomgroup .leftcontrols .prevbutton a img,
-.bottomgroup .leftcontrols .playbutton a img,
-.bottomgroup .leftcontrols .nextbutton a img {
+.bottomgroup .midcontrols .prevbutton a img,
+.bottomgroup .midcontrols .playbutton a img,
+.bottomgroup .midcontrols .nextbutton a img {
 	width: 64px;
 }
 
-.bottomgroup .leftcontrols .volume {
+.bottomgroup .midcontrols .volume {
 	position: absolute;
 	left: 120px;
 	top: 7px;
 	width: 80px;
 }
 
-.bottomgroup .leftcontrols .volume input {
+.bottomgroup .midcontrols .volume input {
 	width: 100%;
 }
 
@@ -260,12 +261,12 @@ hr {
 	text-align: center;
 }
 
-.bottomgroup .rightcontrols {
+.bottomgroup .midcontrols {
 	position: absolute;
-	right: 0px;
+	right: 50%;
 	top: 0px;
 	text-align: right;
-	width: 110px;
+	width: 100%;
 	padding: 20px;
 }
 
@@ -294,8 +295,8 @@ hr {
 	position: absolute;
 	left: 0px;
 	bottom: 0px;
-	height: 260px;
-	background-color: #ddd;
+	height: 64px;
+	background-color: #548904;
 }
 
 .menuview .preview > p {
