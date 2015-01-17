@@ -199,7 +199,7 @@ hr {
 
 .bottomgroup .leftcontrols .playbutton {
 	position: absolute;
-	left: 40px;
+	left: 50%;
 }
 
 .bottomgroup .leftcontrols .nextbutton {
@@ -210,7 +210,7 @@ hr {
 .bottomgroup .leftcontrols .prevbutton a img,
 .bottomgroup .leftcontrols .playbutton a img,
 .bottomgroup .leftcontrols .nextbutton a img {
-	width: 32px;
+	width: 64px;
 }
 
 .bottomgroup .leftcontrols .volume {
