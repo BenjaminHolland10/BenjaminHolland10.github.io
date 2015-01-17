@@ -91,17 +91,7 @@
 						<div class="prevbutton">
 							<a ng-click="prev()"><img src="images/btn-prev.png" /></a>
 						</div>
-                        <div class="preview">
-							<a href="#/albums/{{trackdata.album.id}}">
-								<responsive-cover ng-model="trackdata.album.images"></responsive-cover>
-							</a>
-							<p>
-								<b>{{trackdata.name}}</b>
-								<a href="#/artists/{{trackdata.artists[0].id}}">
-									{{trackdata.artists[0].name}}
-								</a>
-							</p>
-						</div>
+                        
 						<div class="playbutton">
 							<a ng-click="resume()" ng-hide="playing"><img src="images/btn-play.png" /></a>
 							<a ng-click="pause()" ng-show="playing"><img src="images/btn-pause.png" /></a>
