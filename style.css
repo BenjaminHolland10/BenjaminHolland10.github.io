@@ -240,7 +240,8 @@ hr {
 }
 
 .bottomgroup .seekcontrols input {
-	width: 100%;
+	width: 20%;
+    
 }
 
 .bottomgroup .seekcontrols div.progress {
