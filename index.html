@@ -68,7 +68,16 @@
 								</li>
 							</ul>
 						</div>
-						<div class="preview">
+						
+                    
+					</div>
+					<div class="mainview">
+						<div ng-view></div>
+					</div>
+				</div>
+				<div class="bottomgroup">
+                    <div class="midgroup">
+                    <div class="preview">
 							<a href="#/albums/{{trackdata.album.id}}">
 								<responsive-cover ng-model="trackdata.album.images"></responsive-cover>
 							</a>
@@ -79,13 +88,7 @@
 								</a>
 							</p>
 						</div>
-                    
-					</div>
-					<div class="mainview">
-						<div ng-view></div>
-					</div>
-				</div>
-				<div class="bottomgroup">
+                        </div>
 					<div class="leftcontrols">
                         
 						<div class="prevbutton">
