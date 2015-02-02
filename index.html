@@ -1,37 +1,39 @@
-<script src="http://connect.soundcloud.com/sdk.js"></script>
-<script>
-  SC.initialize({
-    client_id: "0cf77f09d09ff38c8e3a2d7ef1b21e1b",
-    redirect_uri: "http://connect.soundcloud.com/examples/callback.html"
-  });
-    
-  $("#connect").live("click", function(){
-    SC.connect(function(){
-      SC.get("/me", function(me){
-        $("#username").text(me.username);
-        $("#description").val(me.description);
-      });
-    });
-  });
-
-  $("#update").live("click", function(){
-    SC.put("/me", {user: {description: $("#description").val()}}, function(response, error){
-      if(error){
-        alert("Some error occured: " + error.message);
-      }else{
-        alert("Profile description updated!");
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Coding for GOOD // API Example 3 - Sound Cloud</title>
+  <link rel="stylesheet" type="text/css"
+  href="http://reset5.googlecode.com/hg/reset.min.css">
+    <script type="text/javascript" src="http://connect.soundcloud.com/sdk.js">
+        SC.initialize({      
+        client_id: '0cf77f09d09ff38c8e3a2d7ef1b21e1b'
+        });
+        SC.get('/tracks', { genres: myGenre, bpm: { from: 120 } },
+  function(tracks) {
+    //FIRST soundcloud sends back an array of 50 objects (0~49)
+    //so let's randomize which one we play:
+      //this logic returns a number between 0 and 50
+      var random = Math.floor(Math.random() * 49);
+      var track_url = tracks[random].permalink_url;
+      //LAST let's use the oEmbed method to display the soundplayer
+      //in the element #target with a options such as auto play
+      SC.oEmbed(track_url, {auto_play: true, color: "ff0066"},
+        document.getElementById("target"));
       }
-    });
-  });
+);
+ 
 </script>
+</head>
+<body>
+    
+  <div id="target"></div>
+        <body onload="playSomeMusic('electronic')">
+            <ul>
+  <li><a href="#" onclick="playSomeMusic('disco')">disco</a></li>
+  <li><a href="#" onclick="playSomeMusic('country')">country</a></li>
+  <li><a href="#" onclick="playSomeMusic('rock')">rock</a></li>
+  <li><a href="#" onclick="playSomeMusic('electronic')">electro/nic<a></li>
+</ul>
+</body>
 
-
-<a href="#" class="big button" id="connect">Connect with SoundCloud</a>
-<div class="logged-in" style="display: one;">
-  <p>
-  Logged in as: <span id="username"></span>
-  </p>
-  Your profile description:
-  <input type="text" id="description" class="fullWidth" />
-  <button id="update" class="big button">Update your profile description</button>
-</div>
+</html>
