@@ -4,40 +4,18 @@
   <title>Coding for GOOD // API Example 3 - Sound Cloud</title>
   <link rel="stylesheet" type="text/css"
   href="http://reset5.googlecode.com/hg/reset.min.css">
-    <script type="text/javascript" src="http://connect.soundcloud.com/sdk.js">
-        function playSomeMusic(myGenre) {  
+    
+    <script src="http://connect.soundcloud.com/sdk.js"></script>
+    <script src="good.js"></script> 
 
-
-        SC.initialize({      
-        client_id: '0cf77f09d09ff38c8e3a2d7ef1b21e1b'
-        });
-        SC.get('/tracks', { genres: myGenre, bpm: { from: 120 } },
-  function(tracks) {
-    //FIRST soundcloud sends back an array of 50 objects (0~49)
-    //so let's randomize which one we play:
-      //this logic returns a number between 0 and 50
-      var random = Math.floor(Math.random() * 49);
-      var track_url = tracks[random].permalink_url;
-      //LAST let's use the oEmbed method to display the soundplayer
-      //in the element #target with a options such as auto play
-      SC.oEmbed(track_url, {auto_play: true, color: "ff0066"},
-        document.getElementById("target"));
-      }
-);
-        }
- 
 </script>
 </head>
 <body>
-    
-  <div id="target"></div>
-        <body onload="playSomeMusic('electronic')">
-            <ul>
-  <li><a href="#" onclick="playSomeMusic('disco')">disco</a></li>
-  <li><a href="#" onclick="playSomeMusic('country')">country</a></li>
-  <li><a href="#" onclick="playSomeMusic('rock')">rock</a></li>
-  <li><a href="#" onclick="playSomeMusic('electronic')">electro/nic<a></li>
-</ul>
+   <ul>
+    <li><a href="#" class="genre"> indie pop </a></li>
+    <li><a href="#" class="genre"> alternative </a></li>
+    <li><a href="#" class="genre"> metal </a></li>
+    </ul>
 </body>
 
 </html>
