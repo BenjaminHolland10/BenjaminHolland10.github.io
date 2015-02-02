@@ -19,6 +19,7 @@ window.onload = function() {
         menuLink[i].onclick = function(e){
             e.preventDefault();
             playSomeSound(menuLink.innerHTML);
-        }
+        };
+    }
         
 };
