@@ -35,7 +35,7 @@ App.Views.Tracks = Backbone.View.extend({
 	initialize: function(){
 		_.bindAll(this, "render");
 		var self = this;
-		SC.get('/tracks', { genres: 'house', order: 'hotness' }, function(tracks, error) {
+		SC.get('/tracks', { genres: 'indie pop', order: 'hotness' }, function(tracks, error) {
 			if(error) console.log('ERROR: ', error);
 			_.each(tracks, function(value, index){
                 self.collection.add(new App.Models.Track(value));
