@@ -7,7 +7,7 @@ window.App = soundc = {
 	Views: {}
 };
 SC.initialize({      
-		client_id: 'ee8e164717cb8a3495919a9ee68e91fc'
+		client_id: '0cf77f09d09ff38c8e3a2d7ef1b21e1b'
 	});
 
 window.template = function(id) {
