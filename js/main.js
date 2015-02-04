@@ -5,6 +5,7 @@ window.App = soundc = {
 	Models: {},
 	Collections: {},
 	Views: {}
+    
 };
 SC.initialize({      
 		client_id: '0cf77f09d09ff38c8e3a2d7ef1b21e1b'
@@ -35,7 +36,7 @@ App.Views.Tracks = Backbone.View.extend({
 	initialize: function(){
 		_.bindAll(this, "render");
 		var self = this;
-		SC.get('/tracks', { q: 'backstreet boys', order: 'hotness' }, function(tracks, error) {
+		SC.get('/tracks', { q:'dan croll', order: 'hotness' }, function(tracks, error) {
 			if(error) console.log('ERROR: ', error);
 			_.each(tracks, function(value, index){
                 self.collection.add(new App.Models.Track(value));
