@@ -1,213 +1,156 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Publisher Test Page</title>
-        <link href="css/foundation.min.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
-    </head>
-    <body>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <div id="demo">
-            <div id="header" class="large-12 small-12 columns large-centered small-centered">
-                <h2>toneden.js</h2>
-                <h1>A fresh new customizable SoundCloud player.</h1>
-            </div>
-            <div id="debug">
-            </div>
-            <div id="player-container">
-                <div id="player" class="large-6 small-12 small-centered large-centered columns">
-                </div>
-                <div id="player2" class="large-6 small-12 small-centered large-centered columns">
-                </div>
-            </div>
-            <script>
-                (function() {
-                    var script = document.createElement('script');
+<html lang="en">
 
-                    script.type = 'text/javascript';
-                    script.async = true;
-                    script.src = '//widget.dev/toneden.loader.js';
-                    //script.src = '//sd.toneden.io/production/toneden.loader.js';
-                    //script.src = '//sd.toneden.io/dev/toneden.loader.js';
+<head>
 
-                    var entry = document.getElementsByTagName('script')[0];
-                    entry.parentNode.insertBefore(script, entry);
-                }());
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-                ToneDenReady = window.ToneDenReady || [];
-                ToneDenReady.push(function() {
-                    ToneDen.player.create({
-                        debug: true,
-                        dom: '#player',
-                        keyboardEvents: false,
-                        urls: [
-                            'https://soundcloud.com/giraffage/music-sounds-better-with-you',
-                            'https://soundcloud.com/wave-racer/wave-racer-streamers',
-                            'https://soundcloud.com/flume/sleepless-feat-jezzabell-doran',
-                            'https://soundcloud.com/ryanhemsworth/ribs-lets-have-a-sleepover'
-                        ],
-                        single: false,
-                        mini: false,
-                        skin: 'light',
-                        staticUrl: '//widget.dev/sdk/',
-                        tracksPerArtist: 4,
-                        visualizerType: 'waves',
-                    });
-                    ToneDen.player.create({
-                        debug: true,
-                        dom: '#single-player-demo',
-                        keyboardEvents: false,
-                        urls: [
-                            'https://soundcloud.com/saintpepsi/unhappy'
-                        ]
-                    });
-                });
-            </script>
-            <br>
-            <br>
-            <div class="row">
-                <div class="large-4 small-12 large-centered small-centered columns skin-change-container">
-                    <a href="#" class="skin-change-btn active" id="light-btn" data-theme="light"></a>
-                    <a href="#" class="skin-change-btn" id="dark-btn" data-theme="dark"></a>
-                    <a href="#" class="skin-change-btn" id="aurora-btn" data-theme="aurora"></a>
-                    <a href="#" class="skin-change-btn" id="mojave-btn" data-theme="mojave"></a>
+    <title>Panama Wedding</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+    
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Dorsa' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+   
+    
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+               
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="music.html">Music</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="tourdates.html">Tour Dates</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">News</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="#contact">Media</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Media</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                      <div id="hello"></div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="player-banner">
-            <div class="row">
-                <div class="tagline"><p>Fully customizable, responsive, and extensible.</p></div>
-                <div class="doc-sec large-10 small-12 columns large-centered" style="height: 450px;">
-                    <h3>Basic usage:</h3>
-                    <p><i class="fa fa-angle-right fw"></i> Add the following snippet of code to your page (before the closing <code>body</code> tag).</p>
-                    <pre class="large-12 small-12 columns"><code class="large-12 small-12 columns javascript">&lt;script&gt;
-        (function() {
-            var script = document.createElement('script');
-
-            script.type = 'text/javascript';
-            script.async = true;
-            script.src = '//sd.toneden.io/production/toneden.loader.js'
-
-            var entry = document.getElementsByTagName('script')[0];
-            entry.parentNode.insertBefore(script, entry);
-        }());
-
-        ToneDenReady = window.ToneDenReady || [];
-        ToneDenReady.push(function() {
-            // This is where all the action happens:
-            ToneDen.player.create({
-                dom: '#player',
-                urls: [
-                    'https://soundcloud.com/giraffage'
-                ]
-            });
-        });
-&lt;/script&gt;</code></pre>
-
+    </header>
+    <!-- Download Section -->
+  
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Download Grayscale</h2>
+                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
                 </div>
+            </div>
+        </div>
 
-                <div class="doc-sec large-10 small-12 columns large-centered">
-                    <h3>Player Configuration:</h3>
-                    <p>There are several configuration options that you can explore. However <code>dom</code> and <code>urls</code> must be specified.</p>
-                    <ul>
-                        <li><code>dom</code>: The container in which you want your player to render in.</li>
-                        <li><code>urls</code>: Urls to SoundCloud artist, tracks, or set. Parameter can take an array of multiple urls.</li>
-                    </ul>
-                    <p>Check out the <a href="https://github.com/ToneDen/tonedenplayer">documentation</a> for a full list of the config parameters and defaults.</p>
-                </div>
-                <div class="doc-sec large-10 small-12 columns large-centered">
-                    <h3>Single Track Players:</h3>
-                    <p>If you want to feature a single track instead of a playlist, the player will automatically default to the single player below if a single track url is provided.</p>
-                    <p>You can also set <code>tracksPerArtist: 1</code> to force a single track to play for an artist url.</p>
-                    <p><em>Example:</em></p>
-                    <pre class="large-12 small-12 columns"><code class="javascript large-12 small-12 columns ">
- ToneDen.player.create({
-    dom: '#player',
-    urls: [
-        'https://soundcloud.com/saintpepsi/unhappy'
-    ]
-});
-                    </code></pre>
-                    <p><em>Demo:</em></p>
-                    <div id="single-player-demo"></div>
-                </div>
-                <div class="doc-sec large-10 small-12 columns large-centered">
-                    <h3>Multiple Players:</h3>
-                    <p>You can create as many players as you like by pushing multiple <code>ToneDen.player</code> objects to <code>ToneDenReady</code>.</p>
-                    <p><em>Example:</em></p>
-                    <pre class="large-12 small-12 columns"><code class="large-12 small-12 columns javascript">
-ToneDenReady.push(function() {
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Panama Wedding</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+   <script>
+    (function() {
+        var script = document.createElement("script");
+
+        script.type = "text/javascript";
+        script.async = true;
+        script.src = "//sd.toneden.io/production/toneden.loader.js"
+
+        var entry = document.getElementsByTagName("script")[0];
+        entry.parentNode.insertBefore(script, entry);
+    }());
+
+    ToneDenReady = window.ToneDenReady || [];
+    ToneDenReady.push(function() {
+        // This is where all the action happens:
         ToneDen.player.create({
-            dom: '#player1',
+            dom: "#hello",
+            eq: "waves",
+            skin: "light",
+            tracksPerArtist: 4,
             urls: [
-                'https://soundcloud.com/giraffage'
-            ]
-        });
-        ToneDen.player.create({
-            dom: '#player2',
-            urls: [
-                'https://soundcloud.com/teendaze'
-            ]
-        });
-        ToneDen.player.create({
-            dom: '#player3',
-            urls: [
-                'https://soundcloud.com/beat-culture'
+                "https://soundcloud.com/mutantbreakz/blacklist-vs-alt-a-fire"
             ]
         });
     });
-</code></pre>
-                </div>
-            </div>
-        </div>
-        <div id="tdsplash">
-            <div class="row">
-                <div class="large-12 small-12 columns large-centered small-centered">
-                    <h4>Create your own custom player without the <code>codez</code></h4>
-                    <h6>At ToneDen, we make it easy to show off your music. Make a free player for your tunes by syncing your SoundCloud.</h6>
-                </div>
-                <div class="large-10 small-12 columns large-centered small-centered showcase">
-                    <div class="large-6 small-12 columns">
-                        <a href="#" class="button large expand showcase-button">Learn More</a>
-                    </div>
-                    <div class="large-6 small-12 columns">
-                        <a href="#" class="button large expand showcase-button">Connect with SoundCloud</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script src="//yandex.st/highlightjs/8.0/highlight.min.js"></script>
-        <!-- <script>hljs.initHighlightingOnLoad();</script> -->
-        <script>
-            $(document).ready(function() {
-                $('.skin-change-btn').on('click', function() {
-                    var id = $(this).attr('id');
-                    var urls = [];
-                    var tracksPerArtist = 1;
-                    var oldPlayer = ToneDen.player.getInstanceByDom('#player');
+</script>
 
-                    if(oldPlayer) {
-                        tracksPerArtist = oldPlayer.parameters.tracksPerArtist;
-                        urls = JSON.parse(JSON.stringify(oldPlayer.parameters.urls));
-                        oldPlayer.destroy();
-                    }
-                    
-                    ToneDen.player.create({
-                        debug: true,
-                        dom: '#player',
-                        urls: urls,
-                        skin: $(this).attr('data-theme'),
-                        tracksPerArtist: tracksPerArtist,
-                        visualizerType: 'bars'
-                    });
+</body>
 
-                    $('.skin-change-btn').removeClass('active');
-                    $(this).addClass('active');
-                });
-            });
-        </script>
-        </div>
-
-    </body>
 </html>
