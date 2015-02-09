@@ -13,11 +13,11 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-   <script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script> 
- <script type='text/javascript' src='js/bit_widget.js'></script>
-<script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script> 
+    <script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script> 
+    <script type='text/javascript' src='js/bit_widget.js'></script>
+    <script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script> 
  
-<script> 
+    <script> 
     google.maps.event.addDomListener(window, 'load', init);
     var map;
     function init() {
@@ -187,7 +187,7 @@
         var mapElement = document.getElementById('panamamap');
         var map = new google.maps.Map(mapElement, mapOptions);
         var locations = [
-['March 6th', 'March 6th', 'undefined', 'undefined', 'undefined', 39.9974533, -83.00732169999998, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 7th', 'undefined', 'undefined', 'undefined', 'undefined', 43.64927530000001, -79.42231549999997, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 9th', 'undefined', 'undefined', 'undefined', 'undefined', 44.468887, -73.17563999999999, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 10', 'undefined', 'undefined', 'undefined', 'undefined', 42.34999579999999, -71.06562880000001, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 12th', 'undefined', 'undefined', 'undefined', 'undefined', 38.91456489999999, -77.03153399999997, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 14th', 'undefined', 'undefined', 'undefined', 'undefined', 40.719133, -73.96178399999997, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 15th', 'undefined', 'undefined', 'undefined', 'undefined', 40.72040640000001, -73.99335830000001, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 16th', 'undefined', 'undefined', 'undefined', 'undefined', 39.961406, -75.155349, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png']
+            ['March 6th', 'March 6th', 'undefined', 'undefined', 'undefined', 39.9974533, -83.00732169999998, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 7th', 'undefined', 'undefined', 'undefined', 'undefined', 43.64927530000001, -79.42231549999997, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 9th', 'undefined', 'undefined', 'undefined', 'undefined', 44.468887, -73.17563999999999, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 10', 'undefined', 'undefined', 'undefined', 'undefined', 42.34999579999999, -71.06562880000001, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 12th', 'undefined', 'undefined', 'undefined', 'undefined', 38.91456489999999, -77.03153399999997, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 14th', 'undefined', 'undefined', 'undefined', 'undefined', 40.719133, -73.96178399999997, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 15th', 'undefined', 'undefined', 'undefined', 'undefined', 40.72040640000001, -73.99335830000001, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 16th', 'undefined', 'undefined', 'undefined', 'undefined', 39.961406, -75.155349, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png']
         ];
         for (i = 0; i < locations.length; i++) {
 			if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
