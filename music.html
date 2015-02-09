@@ -23,10 +23,33 @@
     <link href='http://fonts.googleapis.com/css?family=Dorsa' rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <div id=”player-container” style=”width: inherit; height: 560px;”></div>
-<script type=”text/javascript”>(function() {var script = document.createElement(“script”);script.type = “text/javascript”;script.async = true;script.src = “//sd.toneden.io/production/toneden.loader.js”;var entry = document.getElementsByTagName(“script”)[0];entry.parentNode.insertBefore(script, entry);}());ToneDenReady = window.ToneDenReady || [];ToneDenReady.push(function() {ToneDen.player.create({dom: “#player-container”,skin: “light”,visualizer:”waves”,urls: [“https://soundcloud.com/giraffage/music-sounds-better-with-you”, ,“https://soundcloud.com/wave-racer/wave-racer-streamers”,“https://soundcloud.com/wave-racer/wave-racer-streamers”,“https://soundcloud.com/flume/sleepless-feat-jezzabell-doran”]});});
-</script>
+    <script>
+    (function() {
+        var script = document.createElement("script");
 
+        script.type = "text/javascript";
+        script.async = true;
+        script.src = "js/toneden.loader.js"
+
+        var entry = document.getElementsByTagName("script")[0];
+        entry.parentNode.insertBefore(script, entry);
+    }());
+
+    ToneDenReady = window.ToneDenReady || [];
+    ToneDenReady.push(function() {
+        // This is where all the action happens:
+        ToneDen.player.create({
+            dom: "#player",
+            eq: "waves",
+            skin: "light",
+            tracksPerArtist: 4,
+            urls: [
+                "https://soundcloud.com/mutantbreakz/blacklist-vs-alt-a-fire"
+            ]
+        });
+    });
+    </script>
+    
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
