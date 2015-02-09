@@ -14,6 +14,7 @@ body {
 .about{
     background: url(../img/mainpage.jpg) no-repeat bottom center scroll;
 }
+
 html {
     width: 100%;
     height: 100%;
@@ -68,7 +69,7 @@ a:focus {
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: #000;
+    background-color: #d82189;
 }
 
 .navbar-custom .navbar-brand {
@@ -141,7 +142,7 @@ a:focus {
     text-align: center;
     color: #fff;
     background: url(../img/mainpage.jpg) no-repeat bottom center scroll;
-    background-color: #000;
+    background-color: #d82189;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -259,7 +260,7 @@ a:focus {
     padding: 50px 0;
     color: #fff;
     background: url(../img/panama-wedding-playlist.jpg) no-repeat center center scroll;
-    background-color: #000;
+    background-color: #d82189;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -356,3 +357,31 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
+#map-canvas {
+  height: 100%;
+  position: absolute; 
+  top: 0; 
+  bottom: -200px; 
+  left: 0; 
+  right: 0; 
+  z-index: 0;
+}
+ 
+#container {
+  z-index: 100;
+  font-family: sans-serif;
+  position: relative;
+}
+.google-maps {
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+    }
+ .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
