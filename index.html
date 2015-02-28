@@ -1,21 +1,11 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<script src="http://connect.soundcloud.com/sdk.js"></script>
-<script>
-// initialize client with app credentials
-SC.initialize({
-  client_id: '0cf77f09d09ff38c8e3a2d7ef1b21e1b',
-  redirect_uri: 'http://benjaminholland10.github.io/callback.html'
-});
-
-// initiate auth popup
-SC.connect(function() {
-  SC.get('/me', function(me) { 
-    alert('Hello, ' + me.username); 
-  });
-});
-    SC.get("/groups/55517/tracks", {limit: 1}, function(tracks){
-  alert("Latest track: " + tracks[0].title);
-});
-</script>
-
+<html>
+	<head>
+        <script src="//connect.soundcloud.com/sdk.js"></script>
+        <script src="script.js"></script>
+	</head>
+	<body>
+        <a href="#" class="connect">Connect with SoundCloud</a>
+        <p>Hello, your name is <span id="username"></span></p>
+	</body>
+</html>
