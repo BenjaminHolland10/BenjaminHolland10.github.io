@@ -13,8 +13,8 @@ var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 
 var client_id = '0fb8fa4e316b44dc8b9211235d1fefda'; // Your client id
-var client_secret = '584ebde0c47344b0ae214fba14cc7b5a '; // Your client secret
-var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
+var client_secret = '584ebde0c47344b0ae214fba14cc7b5a'; // Your client secret
+var redirect_uri = 'http://localhost:8888/callback/'; // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
@@ -63,7 +63,7 @@ app.get('/callback', function(req, res) {
   var code = req.query.code || null;
   var state = req.query.state || null;
   var storedState = req.cookies ? req.cookies[stateKey] : null;
-
+    console.log('do stuff');
   if (state === null || state !== storedState) {
     res.redirect('/#' +
       querystring.stringify({
@@ -83,13 +83,15 @@ app.get('/callback', function(req, res) {
       },
       json: true
     };
-
+console.log('hello');
     request.post(authOptions, function(error, response, body) {
+        console.log('something');
       if (!error && response.statusCode === 200) {
 
         var access_token = body.access_token,
             refresh_token = body.refresh_token;
-
+          console.log('Access Token');
+          console.log(access_token);
         var options = {
           url: 'https://api.spotify.com/v1/me',
           headers: { 'Authorization': 'Bearer ' + access_token },
@@ -110,7 +112,8 @@ app.get('/callback', function(req, res) {
       } else {
         res.redirect('/#' +
           querystring.stringify({
-            error: 'invalid_token'
+            error: 'invalid_token',
+            access_token: access_token
           }));
       }
     });
