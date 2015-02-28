@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Tour Dates</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script> 
+    <script type='text/javascript' src='js/bit_widget.js'></script>
+    <script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script> 
+ 
+    <script> 
+    google.maps.event.addDomListener(window, 'load', init);
+    var map;
+    function init() {
+        var mapOptions = {
+            center: new google.maps.LatLng(42.240811,-77.03),
+            zoom: 6,
+            zoomControl: true,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.DEFAULT,
+            },
+            disableDoubleClickZoom: true,
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            },
+            scaleControl: false,
+            scrollwheel: false,
+            panControl: true,
+            streetViewControl: false,
+            draggable : true,
+            overviewMapControl: false,
+            overviewMapControlOptions: {
+                opened: false,
+            },
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            styles: [
+    {
+        "featureType": "administrative",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.country",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.province",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#e3e3e3"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.natural",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#cccccc"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit.line",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit.line",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit.station.airport",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit.station.airport",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#FFFFFF"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    }
+],
+        }
+        var mapElement = document.getElementById('panamamap');
+        var map = new google.maps.Map(mapElement, mapOptions);
+        var locations = [
+            ['March 6th', 'March 6th', 'undefined', 'undefined', 'undefined', 39.9974533, -83.00732169999998, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 7th', 'undefined', 'undefined', 'undefined', 'undefined', 43.64927530000001, -79.42231549999997, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 9th', 'undefined', 'undefined', 'undefined', 'undefined', 44.468887, -73.17563999999999, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 10', 'undefined', 'undefined', 'undefined', 'undefined', 42.34999579999999, -71.06562880000001, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 12th', 'undefined', 'undefined', 'undefined', 'undefined', 38.91456489999999, -77.03153399999997, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 14th', 'undefined', 'undefined', 'undefined', 'undefined', 40.719133, -73.96178399999997, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 15th', 'undefined', 'undefined', 'undefined', 'undefined', 40.72040640000001, -73.99335830000001, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png'],['March 16th', 'undefined', 'undefined', 'undefined', 'undefined', 39.961406, -75.155349, 'https://mapbuildr.com/assets/img/markers/hollow-pin-red.png']
+        ];
+        for (i = 0; i < locations.length; i++) {
+			if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+			if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+			if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+           if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+           if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+            marker = new google.maps.Marker({
+                icon: markericon,
+                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                map: map,
+                title: locations[i][0],
+                desc: description,
+                tel: telephone,
+                email: email,
+                web: web
+            });
+link = '';     }
+   var waypts = [];
+      directionsService = new google.maps.DirectionsService();
+      directionsDisplay = new google.maps.DirectionsRenderer({
+          suppressMarkers: true
+      });
+      if (locations.length > 1){
+          for (var i = 0; i < locations.length; i++) {
+              waypts.push({
+                  location:new google.maps.LatLng(locations[i][5], locations[i][6]),
+                  stopover:true
+              }); 
+          };
+          var request = {
+              origin: new google.maps.LatLng(locations[0][5], locations[0][6]),
+              destination: new google.maps.LatLng(locations[locations.length - 1][5], locations[locations.length - 1][6]),
+              waypoints: waypts,
+              optimizeWaypoints: true,
+              travelMode: google.maps.DirectionsTravelMode.DRIVING
+          };
+          directionsService.route(request, function(response, status) {
+              if (status == google.maps.DirectionsStatus.OK) {
+                  polylineOptions = {
+                      strokeColor: '#4169b6',
+                      strokeWeight: '4'
+                  }
+                  directionsDisplay.setOptions({
+                      polylineOptions: polylineOptions
+                  });
+                  directionsDisplay.setDirections(response);
+              }
+          });
+          directionsDisplay.setMap(map);
+       }
+   
+
+}
+</script>
+<style>
+    #panamamap {
+        height:600px;
+        width:1200px;
+    }
+    .gm-style-iw * {
+        display: block;
+        width: 100%;
+    }
+    .gm-style-iw h4, .gm-style-iw p {
+        margin: 0;
+        padding: 0;
+    }
+    .gm-style-iw a {
+        color: #4272db;
+    }
+</style>
+
+    <script src="/test/application.js" type="text/javascript"></script>
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Dorsa' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+               
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="music.html">Music</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="tourdates.html">Tour Dates</a>
+                    </li>
+                
+                     <li>
+                        <a class="page-scroll" href="media.html">Media</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="aboutus.html">About</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+   
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                
+                <div class="row">
+                    <br></br>
+                    <br></br>
+                        <div id='panamamap'></div>  
+                       <a href='http://www.bandsintown.com' class='bit-widget-initializer' data-artist='PANAMA WEDDING' data-bg-color='rgba(62,191,225,.7)' data-facebook-comments='false'font-family='sans-serif'>Bandsintown</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <h2>Copyright &copy; Panama Wedding</h2>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+</body>
+
+</html>
