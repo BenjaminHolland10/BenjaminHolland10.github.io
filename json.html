@@ -52,7 +52,7 @@ var svg = d3.select("body").append("svg")
 	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // load the external data
-d3.json("soundcloud.json", function(error, treeData) {
+d3.json("treeData.json", function(error, treeData) {
   root = treeData[0];
   update(root);
 });
@@ -86,7 +86,7 @@ function update(source) {
 	  .attr("dy", ".35em")
 	  .attr("text-anchor", function(d) { 
 		  return d.children || d._children ? "end" : "start"; })
-	  .text(function(d) { return d.username; })
+	  .text(function(d) { return d.name; })
 	  .style("fill-opacity", 1);
 
   // Declare the links…
