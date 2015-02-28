@@ -1,5 +1,20 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+<script src="http://connect.soundcloud.com/sdk.js"></script>
+<script>
+// initialize client with app credentials
+SC.initialize({
+  client_id: '0cf77f09d09ff38c8e3a2d7ef1b21e1b',
+  redirect_uri: 'http://benjaminholland10.github.io/callback.html'
+});
+
+// initiate auth popup
+SC.connect(function() {
+  SC.get('/me', function(me) { 
+    alert('Hello, ' + me.username); 
+  });
+});
+</script>
 <style>
 
 body{

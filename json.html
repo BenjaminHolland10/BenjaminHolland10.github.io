@@ -64,7 +64,7 @@ function update(source) {
 	  links = tree.links(nodes);
 
   // Normalize for fixed-depth.
-  nodes.forEach(function(d) { d.y = d.depth * 180; });
+  nodes.forEach(function(d) { d.y = d.depth * 80; });
 
   // Declare the nodes…
   var node = svg.selectAll("g.node")
@@ -82,12 +82,13 @@ function update(source) {
 
   nodeEnter.append("text")
 	  .attr("x", function(d) { 
-		  return d.username || d._username ? -13 : 13; })
+		  return d.name|| d._name ? -13 : 13; })
 	  .attr("dy", ".35em")
 	  .attr("text-anchor", function(d) { 
-		  return d.username || d._username ? "end" : "start"; })
+		  return d.username || d._username ? "end" : "start";})
 	  .text(function(d) { return d.username; })
 	  .style("fill-opacity", 1);
+    
 
   // Declare the links…
   var link = svg.selectAll("path.link")
