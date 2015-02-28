@@ -13,10 +13,10 @@ $(document).ready(function () {
     //circleColor: use @default
     data: {
       items: [
-        {text: "Varun", count: "236"},
-        {text: "Ben", count: "382"},
-        {text: "Jordan", count: "170"},
-        {text: "Ahilan", count: "123"},
+        {text: "Varun", count: "31 Likes in common"},
+        {text: "Ben", count: "22 likes in common"},
+        {text: "Jordan", count: "11 likes in common"},
+        {text: "Ahilan", count: "2 likes in common :("},
         {text: "Peter", count: "12"},
         {text: "", count: "170"}
       ],
