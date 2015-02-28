@@ -82,17 +82,19 @@ function update(source) {
 
   nodeEnter.append("text")
 	  .attr("x", function(d) { 
-		  return d.children || d._children ? -13 : 13; })
+		  return d.username || d._username ? -13 : 13; })
 	  .attr("dy", ".35em")
 	  .attr("text-anchor", function(d) { 
-		  return d.children || d._children ? "end" : "start"; })
-	  .text(function(d) { return d.name; })
+		  return d.username || d._username ? "end" : "start"; })
+	  .text(function(d) { return d.username; })
 	  .style("fill-opacity", 1);
 
   // Declare the links…
   var link = svg.selectAll("path.link")
 	  .data(links, function(d) { return d.target.id; });
-
+  
+    alert(thejson[i].username);
+  
   // Enter the links.
   link.enter().insert("path", "g")
 	  .attr("class", "link")
