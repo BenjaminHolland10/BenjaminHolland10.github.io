@@ -1,159 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Network | Basic usage</title>
+  <title>Hello Bubble Chart</title>
+  <meta charset="utf-8">
 
-  <script type="text/javascript" src="vis.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600,200italic,600italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+
+  <script src="http://phuonghuynh.github.io/js/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="http://phuonghuynh.github.io/js/bower_components/d3/d3.min.js"></script>
+  <script src="http://phuonghuynh.github.io/js/bower_components/d3-transform/src/d3-transform.js"></script>
+  <script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/extarray.js"></script>
+  <script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/misc.js"></script>
+  <script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/micro-observer.js"></script>
+  <script src="http://phuonghuynh.github.io/js/bower_components/microplugin/src/microplugin.js"></script>
+  <script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/bubble-chart.js"></script>
+  <script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/central-click/central-click.js"></script>
+  <script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/lines/lines.js"></script>
+  <script src="index.js"></script>
+  <style>
+    .bubbleChart {
+      min-width: 100px;
+      max-width: 700px;
+      height: 700px;
+      margin: 0 auto;
+    }
+    .bubbleChart svg{
+      background: #000000;
+    }
+  </style>
 </head>
-
-<body>
-
-<div id="mynetwork"></div>
-
-<script type="text/javascript">
-    var stuff = [
-   {
-    "kind": "track",
-    "id": 68401589,
-    "created_at": "2012/11/22 10:39:55 +0000",
-    "user_id": 2016749,
-    "duration": 187053,
-    "commentable": true,
-    "state": "finished",
-    "original_content_size": 7484521,
-    "last_modified": "2013/10/31 14:40:22 +0000",
-    "sharing": "public",
-    "tag_list": "",
-    "permalink": "count-me-out",
-    "streamable": true,
-    "embeddable_by": "all",
-    "downloadable": false,
-    "purchase_url": null,
-    "label_id": null,
-    "purchase_title": null,
-    "genre": "Folk",
-    "title": "Count me out",
-    "description": "",
-    "label_name": "",
-    "release": "",
-    "track_type": "original",
-    "key_signature": "",
-    "isrc": "",
-    "video_url": null,
-    "bpm": null,
-    "release_year": null,
-    "release_month": null,
-    "release_day": null,
-    "original_format": "mp3",
-    "license": "all-rights-reserved",
-    "uri": "https://api.soundcloud.com/tracks/68401589",
-    "user":  {
-      "id": 2016749,
-      "kind": "user",
-      "permalink": "mooders",
-      "username": "mooders",
-      "last_modified": "2014/11/25 15:27:44 +0000",
-      "uri": "https://api.soundcloud.com/users/2016749",
-      "permalink_url": "http://soundcloud.com/mooders",
-      "avatar_url": "https://i1.sndcdn.com/avatars-000018130606-px3sia-large.jpg"
-    },
-    "permalink_url": "http://soundcloud.com/mooders/count-me-out",
-    "artwork_url": null,
-    "waveform_url": "https://w1.sndcdn.com/Z4WoFFIUNpj2_m.png",
-    "stream_url": "https://api.soundcloud.com/tracks/68401589/stream",
-    "playback_count": 2409,
-    "download_count": 0,
-    "favoritings_count": 73,
-    "comment_count": 21,
-    "attachments_uri": "https://api.soundcloud.com/tracks/68401589/attachments",
-    "policy": "ALLOW"
-  },
-   {
-    "kind": "track",
-    "id": 12766372,
-    "created_at": "2011/03/30 07:26:29 +0000",
-    "user_id": 727717,
-    "duration": 184207,
-    "commentable": true,
-    "state": "finished",
-    "original_content_size": 7363478,
-    "last_modified": "2015/02/11 22:22:20 +0000",
-    "sharing": "public",
-    "tag_list": "Post beat Hiphop Triphop Trubhop Midwess Midwest Cleveland Ohio Robb Fernald",
-    "permalink": "phase-v-4-0",
-    "streamable": true,
-    "embeddable_by": "all",
-    "downloadable": false,
-    "purchase_url": null,
-    "label_id": null,
-    "purchase_title": null,
-    "genre": "post future",
-    "title": "Phase V",
-    "description": "Post beat.",
-    "label_name": "",
-    "release": "",
-    "track_type": "original",
-    "key_signature": "",
-    "isrc": "",
-    "video_url": "http://www.youtube.com/watch?v=wtQJArkypkE",
-    "bpm": null,
-    "release_year": null,
-    "release_month": null,
-    "release_day": null,
-    "original_format": "mp3",
-    "license": "cc-by",
-    "uri": "https://api.soundcloud.com/tracks/12766372",
-    "user":  {
-      "id": 727717,
-      "kind": "user",
-      "permalink": "the-midwess",
-      "username": "THE MIDWESS",
-      "last_modified": "2015/02/21 03:25:36 +0000",
-      "uri": "https://api.soundcloud.com/users/727717",
-      "permalink_url": "http://soundcloud.com/the-midwess",
-      "avatar_url": "https://i1.sndcdn.com/avatars-000004995472-g8c72d-large.jpg"
-    },
-    "permalink_url": "http://soundcloud.com/the-midwess/phase-v-4-0",
-    "artwork_url": "https://i1.sndcdn.com/artworks-000005962896-0l1jp8-large.jpg",
-    "waveform_url": "https://w1.sndcdn.com/VbrzqYHVt4tV_m.png",
-    "stream_url": "https://api.soundcloud.com/tracks/12766372/stream",
-    "playback_count": 9557,
-    "download_count": 100,
-    "favoritings_count": 349,
-    "comment_count": 124,
-    "attachments_uri": "https://api.soundcloud.com/tracks/12766372/attachments",
-    "policy": "ALLOW"
-  }
-]
-var titles = []; 
-
-for(var i = 0; i < stuff.length; i++){
-    titles[i] = stuff[i].title; 
-} 
-  // create an array with nodes
-  var nodes = []; 
-  nodes[1] = {id: 1, label: "Ben Holland"}; 
-
-  ];
-
-  // create an array with edges
-  var edges = [
-   // {from: 1, to: 2}
-    
-  ];
-
-  // create a network
-  var container = document.getElementById('mynetwork');
-  var data= {
-    nodes: nodes,
-    edges: edges,
-  };
-  var options = {
-    width: '400px',
-    height: '400px'
-  };
-  var network = new vis.Network(container, data, options);
-</script>
-
+<body style="background: #000000">
+<div class="bubbleChart"/>
 </body>
 </html>
